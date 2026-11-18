@@ -1,6 +1,6 @@
 const KEY="admax_banking_demo_v2";
 const sample={customers:[{id:"CUS-1001",name:"Ama Mensah",phone:"000-000-0000",email:"ama@example.test",joined:"2026-01-12"},{id:"CUS-1002",name:"Kojo Asare",phone:"000-000-0000",email:"kojo@example.test",joined:"2026-02-03"}],accounts:[{id:"ADM-0001",customerId:"CUS-1001",type:"Savings",balance:2500,status:"Active"},{id:"ADM-0002",customerId:"CUS-1002",type:"Current",balance:4800,status:"Active"}],transactions:[{id:"TXN-0001",type:"Deposit",accountId:"ADM-0001",amount:2500,date:"2026-01-12",note:"Demo opening balance"},{id:"TXN-0002",type:"Deposit",accountId:"ADM-0002",amount:4800,date:"2026-02-03",note:"Demo opening balance"}],loans:[]};
-let db;try{db=JSON.parse(localStorage.getItem(KEY))||JSON.parse(JSON.stringify(sample))}catch(e){db=JSON.parse(JSON.stringify(sample))}
+let db;try{db=JSON.parse(localStorage.getItem(KEY)||localStorage.getItem("admax_banking_demo_v1"))||JSON.parse(JSON.stringify(sample))}catch(e){db=JSON.parse(JSON.stringify(sample))}
 let page="overview";
 const $=s=>document.querySelector(s), money=n=>"₵"+Number(n||0).toLocaleString("en-GH",{minimumFractionDigits:2,maximumFractionDigits:2}), today=()=>new Date().toISOString().slice(0,10);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
