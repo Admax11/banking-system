@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ADMAX Banking Management Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">A</span><div><b>ADMAX</b><small>BANKING DEMO</small></div></div>
+      <nav>
+        <button class="nav-link active" data-view="overview">▦ &nbsp; Overview</button>
+        <button class="nav-link" data-view="customers">♙ &nbsp; Customers</button>
+        <button class="nav-link" data-view="accounts">▤ &nbsp; Accounts</button>
+        <button class="nav-link" data-view="transactions">⇄ &nbsp; Transactions</button>
+        <button class="nav-link" data-view="loans">▣ &nbsp; Loan Requests</button>
+        <button class="nav-link" data-view="reports">▥ &nbsp; Reports</button>
+      </nav>
+      <div class="sidebar-note">DEMO ENVIRONMENT<br><span>No real money or bank accounts</span></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><span class="eyebrow">BANK MANAGEMENT</span><h1 id="page-title">Overview</h1></div><div class="user-chip"><span class="avatar">A</span><span>Demo Administrator</span></div></header>
+      <div class="notice">⚠ Demonstration only — use sample information. Do not enter real customer or financial details.</div>
+      <section id="view" aria-live="polite"></section>
+      <footer>ADMAX Banking Management System · Prototype · GHS (₵)</footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
